@@ -145,8 +145,8 @@ const Hero = () => {
         </p>
         
         <div className="hero-buttons">
-          <a href="#showcase" className="btn btn-primary">START YOUR FILM</a>
-          <a href="#features" className="btn btn-secondary">VIEW SHOWREEL</a>
+          <a href="#services" className="btn btn-primary">START YOUR FILM</a>
+          <a href="#services" className="btn btn-secondary">VIEW SHOWREEL</a>
         </div>
       </div>
       

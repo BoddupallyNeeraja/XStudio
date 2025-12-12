@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className={`navbar-menu ${mobileMenuOpen ? 'active' : ''}`}>
             <a href="#home" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a>
             <a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#showcase" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
+            <a href="#services" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
             <a href="#contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             <a href="#contact" className="btn-book-now" onClick={() => setMobileMenuOpen(false)}>BOOK NOW</a>
           </div>

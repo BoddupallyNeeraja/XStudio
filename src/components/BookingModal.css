@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: #000000;
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -68,15 +68,16 @@
 }
 
 .booking-close:hover {
-  background: rgba(239, 68, 68, 0.2);
+  background: #000000;
   color: #ef4444;
   transform: rotate(90deg);
+  border: 1px solid #ef4444;
 }
 
 .booking-header {
   padding: 3rem 3rem 2rem;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #ffffff;
 }
 
 .booking-title {
@@ -90,7 +91,7 @@
 
 .booking-subtitle {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: #ffffff;
   margin: 0;
 }
 
@@ -99,12 +100,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding: 2rem 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #ffffff;
 }
 
 .booking-info-card {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: #000000;
+  border: 1px solid #ef4444;
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -123,7 +124,7 @@
 }
 
 .booking-info-card li {
-  color: var(--text-secondary);
+  color: #ffffff;
   padding: 0.5rem 0;
   font-size: 0.95rem;
 }
@@ -154,11 +155,11 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 0.75rem 1rem;
-  color: var(--text-primary);
+  color: #ffffff;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -169,12 +170,12 @@
 .form-group textarea:focus {
   outline: none;
   border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-muted);
+  color: #ffffff;
 }
 
 .form-group select {
@@ -215,7 +216,7 @@
 }
 
 .form-note {
-  color: var(--text-muted);
+  color: #ffffff;
   font-size: 0.9rem;
   margin: 0;
 }

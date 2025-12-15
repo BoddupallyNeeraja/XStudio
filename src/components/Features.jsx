@@ -54,7 +54,7 @@ const Services = () => {
       title: 'Directing',
       description: 'Visionary direction that guides performances and shapes the creative vision into a cohesive cinematic experience.',
       gradient: 'gradient-3',
-      featured: true,
+      featured: false,
       image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
       details: {
         overview: 'Our directors bring creative vision and technical expertise to guide every aspect of your production.',
@@ -205,17 +205,16 @@ const Services = () => {
                   <img src={service.image} alt={service.title} className="service-card-image" />
                   <div className="service-card-overlay"></div>
                 </div>
-                <div className={`service-icon ${service.gradient}`}>
-                  <span className="icon-emoji">{service.icon}</span>
+                <div className="service-card-content">
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-description">{service.description}</p>
+                  <button 
+                    className="service-learn-more-btn"
+                    onClick={() => openServiceModal(service)}
+                  >
+                    LEARN MORE &gt;
+                  </button>
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <button 
-                  className="service-learn-more-btn"
-                  onClick={() => openServiceModal(service)}
-                >
-                  LEARN MORE &gt;
-                </button>
               </div>
             ))}
           </div>
@@ -231,9 +230,6 @@ const Services = () => {
               <div className="modal-image-overlay"></div>
             </div>
             <div className="modal-header">
-              <div className={`modal-icon ${selectedService.gradient}`}>
-                <span className="icon-emoji">{selectedService.icon}</span>
-              </div>
               <h2 className="modal-title">{selectedService.title}</h2>
             </div>
             <div className="modal-content">

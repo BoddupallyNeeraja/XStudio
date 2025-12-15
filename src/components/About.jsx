@@ -36,19 +36,15 @@ const About = () => {
           
           <div className="about-stats">
             <div className="stat-card">
-              <div className="stat-number">200+</div>
               <div className="stat-label">FILMS PRODUCED</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">75+</div>
               <div className="stat-label">INDUSTRY AWARDS</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">50M+</div>
               <div className="stat-label">BOX OFFICE REVENUE</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">15+</div>
               <div className="stat-label">YEARS OF EXCELLENCE</div>
             </div>
           </div>

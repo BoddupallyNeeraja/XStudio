@@ -116,6 +116,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn-book-now:hover {

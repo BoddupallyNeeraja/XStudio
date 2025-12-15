@@ -11,6 +11,7 @@ const Services = () => {
       description: 'Full-scale movie production from pre-production planning to final delivery, handling every aspect of filmmaking.',
       gradient: 'gradient-1',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
       details: {
         overview: 'Our comprehensive film production services cover every stage of the filmmaking process, from initial concept to final distribution.',
         services: [
@@ -32,6 +33,7 @@ const Services = () => {
       description: 'Expert camera work and visual storytelling that captures emotion and brings your narrative to life on screen.',
       gradient: 'gradient-2',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
       details: {
         overview: 'Our award-winning cinematography team specializes in creating stunning visual narratives that enhance your story.',
         services: [
@@ -53,6 +55,7 @@ const Services = () => {
       description: 'Visionary direction that guides performances and shapes the creative vision into a cohesive cinematic experience.',
       gradient: 'gradient-3',
       featured: true,
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
       details: {
         overview: 'Our directors bring creative vision and technical expertise to guide every aspect of your production.',
         services: [
@@ -74,6 +77,7 @@ const Services = () => {
       description: 'Professional editing, color grading, VFX, and sound design to polish your film to perfection.',
       gradient: 'gradient-4',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&q=80',
       details: {
         overview: 'Complete post-production services using industry-leading software and cutting-edge techniques.',
         services: [
@@ -95,6 +99,7 @@ const Services = () => {
       description: 'Comprehensive event coordination from concept to execution, ensuring every detail is perfectly orchestrated.',
       gradient: 'gradient-1',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80',
       details: {
         overview: 'End-to-end event planning and production services for memorable and impactful events.',
         services: [
@@ -116,6 +121,7 @@ const Services = () => {
       description: 'Professional corporate gatherings, conferences, product launches, and team-building experiences.',
       gradient: 'gradient-2',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
       details: {
         overview: 'Professional corporate event production that reflects your brand and delivers powerful business results.',
         services: [
@@ -137,6 +143,7 @@ const Services = () => {
       description: 'Concert production, award ceremonies, and live entertainment with state-of-the-art technical support.',
       gradient: 'gradient-3',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800&q=80',
       details: {
         overview: 'Spectacular live show production with professional staging, lighting, and audio-visual technology.',
         services: [
@@ -158,6 +165,7 @@ const Services = () => {
       description: 'Memorable weddings, galas, and private celebrations crafted with cinematic flair and attention to detail.',
       gradient: 'gradient-4',
       featured: false,
+      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
       details: {
         overview: 'Elevate your special occasions with cinematic production values and personalized service.',
         services: [
@@ -193,6 +201,10 @@ const Services = () => {
           <div className="services-grid">
             {services.map((service, index) => (
               <div key={index} className={`service-card ${service.featured ? 'featured' : ''}`}>
+                <div className="service-card-image-wrapper">
+                  <img src={service.image} alt={service.title} className="service-card-image" />
+                  <div className="service-card-overlay"></div>
+                </div>
                 <div className={`service-icon ${service.gradient}`}>
                   <span className="icon-emoji">{service.icon}</span>
                 </div>
@@ -214,6 +226,10 @@ const Services = () => {
         <div className="service-modal-overlay" onClick={closeServiceModal}>
           <div className="service-modal" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeServiceModal}>&times;</button>
+            <div className="modal-image-container">
+              <img src={selectedService.image} alt={selectedService.title} className="modal-image" />
+              <div className="modal-image-overlay"></div>
+            </div>
             <div className="modal-header">
               <div className={`modal-icon ${selectedService.gradient}`}>
                 <span className="icon-emoji">{selectedService.icon}</span>

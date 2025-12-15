@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ onBookNowClick }) => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -33,7 +33,15 @@ const Navbar = () => {
             <a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#services" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
             <a href="#contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="#contact" className="btn-book-now" onClick={() => setMobileMenuOpen(false)}>BOOK NOW</a>
+            <button 
+              className="btn-book-now" 
+              onClick={() => {
+                setMobileMenuOpen(false)
+                onBookNowClick()
+              }}
+            >
+              BOOK NOW
+            </button>
           </div>
 
           <button 
